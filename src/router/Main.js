@@ -18,6 +18,21 @@ export const Main = ({ isLoggedIn }) => {
         <div className="text-white flex justify-center">
           <a>별을 달아 덕담을 주고받아요.</a>
         </div>
+
+        <div className="mt-10">
+          <div className="text-white flex justify-center">
+            <a>모든 별은 설날이 되면 열어볼 수 있어요.</a>
+          </div>
+          <div className="text-white flex justify-center">
+            <a>설을 기다리며 덕담을 주고받아요!</a>
+          </div>
+          <div className="text-white flex justify-center">
+            <a>모든 덕담은 익명이에요!</a>
+          </div>
+          <div className="text-white flex justify-center">
+            <a>하지만 재치있는 닉네임을 설정할 수 있어요!</a>
+          </div>
+        </div>
       </div>
 
       <div className="pb-4">

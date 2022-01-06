@@ -3,7 +3,7 @@ import { Back } from "components/Back";
 import { Buttons } from "components/Buttons";
 import { useNavigate, useParams } from "react-router-dom";
 import { dbService } from "fbase";
-import { addDoc, collection, doc, serverTimestamp } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import Progress from "@material-tailwind/react/Progress";
 
 const stars = [
@@ -53,7 +53,7 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
   const navigate = useNavigate();
   let { id } = useParams();
   const pickStar = (id) => {
-    console.log(`you click ${id}`);
+    // console.log(`you click ${id}`);
     setPickedStar(id);
   };
 
@@ -71,7 +71,7 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
   const onClick = async (e) => {
     // method submit to database
     // e.preventDefault();
-    console.log(nickName, text);
+    // console.log(nickName, text);
     let starObject;
 
     starObject = {
@@ -86,21 +86,21 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
     try {
       if (text.length > 0 && 10 > pickedStar > 0) {
         const docRef = await addDoc(collection(dbService, "stars"), starObject);
-        console.log("Document written with ID: ", docRef.id);
+        // console.log("Document written with ID: ", docRef.id);
         alert("별을 달아주셔서 감사합니다.");
 
         // set each id
         navigate(`/home/${id}`);
       } else if (text.length === 0) {
-        console.log("None text");
+        // console.log("None text");
         alert("덕담을 적어주세요.");
       } else {
-        console.log("Unexpected error");
+        // console.log("Unexpected error");
         alert("Unexpected error");
       }
     } catch (e) {
       // catch error (no case yet.)
-      console.log("Error adding document: ", e);
+      // console.log("Error adding document: ", e);
       alert("Error adding document: ", e);
     }
   };

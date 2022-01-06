@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link, useNavigate } from "react-router-dom";
-import { authService, firebaseAuth } from "fbase";
+import { authService } from "fbase";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");

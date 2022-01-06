@@ -1,14 +1,6 @@
 import { dbService } from "fbase";
-import {
-  collection,
-  query,
-  getDocs,
-  orderBy,
-  where,
-  doc,
-} from "firebase/firestore";
+import { collection, query, getDocs, orderBy, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
 import { DetailStar } from "./DetailStar";
 import Icon from "@material-tailwind/react/Icon";
 import PaginationItem from "@material-tailwind/react/PaginationItem";
@@ -18,6 +10,7 @@ export const Products = ({ id }) => {
   const [open, setOpen] = useState(false);
   const [clickedStar, setClickedStar] = useState(null);
   const [step, setStep] = useState(1);
+
   const getMyStars = async () => {
     const q = query(
       collection(dbService, "stars"),
@@ -39,10 +32,18 @@ export const Products = ({ id }) => {
     getMyStars();
   }, []);
 
+  // const target = new Date("February 1, 2022 00:00:00");
+  // const target_date = target.getTime()
+  const target = 1643641200000;
   const onClick = (star) => {
-    console.log(star.id);
-    setClickedStar(star);
-    setOpen(!open);
+    let now = Date.now();
+    if (now >= target) {
+      setClickedStar(star);
+      setOpen(!open);
+    } else {
+      alert("설날이 아니에요!!\n모든 덕담카드는 설날부터 볼 수 있어요!");
+      // console.log(now);
+    }
   };
 
   return (
@@ -97,9 +98,9 @@ export const Products = ({ id }) => {
             <Icon name="keyboard_arrow_right" />
           </PaginationItem>
         )}
-        <div className="absolute right-0 bottom-0 flex items-center justify-end mr-3 text-4xl">
+        <div className="absolute right-0 bottom-0 flex items-center justify-center mr-px text-5xl border-2 pr-3 rounded-lg">
           <svg
-            className=" text-yellow-400 w-11 h-11 mr-2"
+            className=" text-yellow-400 w-20 h-20 mr-2"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
