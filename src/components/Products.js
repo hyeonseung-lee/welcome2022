@@ -66,11 +66,7 @@ export const Products = ({ id }) => {
           <div className=" h-11/12 w-11/12 grid gap-y-1 gap-x-2 grid-cols-6 grid-rows-6">
             {/* show 36 (6x6)  stars */}
             {stars.slice(36 * (step - 1), 36 * step).map((star) => (
-              <a
-                key={star.id}
-                className="group flex flex-col items-center"
-                class="icon"
-              >
+              <a key={star.id} className="group flex flex-col items-center">
                 <button
                   onClick={() => {
                     onClick(star);

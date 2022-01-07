@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navigation } from "components/Navigation";
 import { Products } from "components/Products";
 import { Buttons } from "components/Buttons";
@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 
 export const Home = ({ userObj, isLoggedIn }) => {
   let { id } = useParams();
+
   // console.log(id);
   return (
     <div className={"base flex flex-col justify-start"}>

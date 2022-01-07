@@ -175,7 +175,6 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
                       <a
                         onClick={() => pickStar(s.id)}
                         key={s.id}
-                        href="#"
                         className="group"
                       >
                         <div className="w-40  border-4 border-yellow-500  bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
@@ -190,7 +189,6 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
                       <a
                         onClick={() => pickStar(s.id)}
                         key={s.id}
-                        href=""
                         className="group"
                       >
                         <div className="w-40 bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
