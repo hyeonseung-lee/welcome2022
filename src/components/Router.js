@@ -16,7 +16,7 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
   let { id } = useParams();
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route
@@ -32,7 +32,7 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
 
         {isLoggedIn ? (
           <>
-            {/* <Route path="*" element={<Navigate to="/" />} /> */}
+            {/* <Route  path="*" element={<Navigate to="/" />} /> */}
             <Route
               path="*"
               element={
