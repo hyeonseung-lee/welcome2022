@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://hyeonseung-lee.github.io/welcome2022/static/css/main.95253897.css",
+    "main.css": "https://hyeonseung-lee.github.io/welcome2022/static/css/main.22515b57.css",
     "main.js": "https://hyeonseung-lee.github.io/welcome2022/static/js/main.e2584414.js",
     "static/media/background.png": "https://hyeonseung-lee.github.io/welcome2022/static/media/background.80e70fd4aeec6297238a.png",
     "static/media/star (9).png": "https://hyeonseung-lee.github.io/welcome2022/static/media/star (9).15a01e74b39db93ada39.png",
@@ -14,11 +14,11 @@
     "static/media/star (6).png": "https://hyeonseung-lee.github.io/welcome2022/static/media/star (6).a45d0a056c4bbef6d829.png",
     "static/media/star (2).png": "https://hyeonseung-lee.github.io/welcome2022/static/media/star (2).618d11e122cbca3f8e9e.png",
     "index.html": "https://hyeonseung-lee.github.io/welcome2022/index.html",
-    "main.95253897.css.map": "https://hyeonseung-lee.github.io/welcome2022/static/css/main.95253897.css.map",
+    "main.22515b57.css.map": "https://hyeonseung-lee.github.io/welcome2022/static/css/main.22515b57.css.map",
     "main.e2584414.js.map": "https://hyeonseung-lee.github.io/welcome2022/static/js/main.e2584414.js.map"
   },
   "entrypoints": [
-    "static/css/main.95253897.css",
+    "static/css/main.22515b57.css",
     "static/js/main.e2584414.js"
   ]
 }
