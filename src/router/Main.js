@@ -6,7 +6,7 @@ export const Main = ({ isLoggedIn }) => {
   return (
     <div className={"base flex flex-col justify-between"}>
       <div>
-        <div className="w-full flex justify-center pt-4">
+        <div className="w-full flex justify-center pt-8">
           <Link to="/">
             <img
               src={require("assets/star_logo.gif")}
@@ -15,11 +15,11 @@ export const Main = ({ isLoggedIn }) => {
             />
           </Link>
         </div>
-        <div className="text-white flex justify-center">
+        <div className="mt-2 text-white flex justify-center">
           <a>별을 달아 덕담을 주고받아요.</a>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-60 text-lg">
           <div className="text-white flex justify-center">
             <a>모든 별은 설날이 되면 열어볼 수 있어요.</a>
           </div>
@@ -38,7 +38,7 @@ export const Main = ({ isLoggedIn }) => {
       <div className="pb-4">
         <Buttons url="/auth" text="시작하기" />
         <div className="text-white flex justify-center">
-          <a>made by winney.</a>
+          <a href="/aboutUs">made by winney.</a>
         </div>
       </div>
     </div>

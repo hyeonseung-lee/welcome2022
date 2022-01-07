@@ -10,38 +10,74 @@ const stars = [
   {
     id: 1,
     path: "star (1).png",
+    writer: "Freepik",
+    writer_url: "https://www.freepik.com",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 2,
     path: "star (2).png",
+    writer: "Pixel perfect",
+    writer_url: "https://www.flaticon.com/authors/pixel-perfect",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 3,
     path: "star (3).png",
+    writer: "Freepik",
+    writer_url: "https://www.freepik.com",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 4,
     path: "star (4).png",
+    writer: "Flat Icons",
+    writer_url: "https://www.flaticon.com/authors/flat-icons",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 5,
     path: "star (5).png",
+    writer: "Freepik",
+    writer_url: "https://www.freepik.com",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 6,
     path: "star (6).png",
+    writer: "Freepik",
+    writer_url: "https://www.freepik.com",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 7,
     path: "star (7).png",
+    writer: "Freepik",
+    writer_url: "https://www.freepik.com",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 8,
     path: "star (8).png",
+    writer: "Freepik",
+    writer_url: "https://www.freepik.com",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
   {
     id: 9,
     path: "star (9).png",
+    writer: "Smashicons",
+    writer_url: "https://www.flaticon.com/authors/smashicons",
+    homepage: "www.flaticon.com",
+    homepage_url: "https://www.flaticon.com/",
   },
 ];
 
@@ -84,7 +120,7 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
     };
 
     try {
-      if (text.length > 0 && 10 > pickedStar > 0) {
+      if (nickName.length > 0 && text.length > 0 && 10 > pickedStar > 0) {
         const docRef = await addDoc(collection(dbService, "stars"), starObject);
         // console.log("Document written with ID: ", docRef.id);
         alert("별을 달아주셔서 감사합니다.");
@@ -92,8 +128,10 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
         // set each id
         navigate(`/home/${id}`);
       } else if (text.length === 0) {
-        // console.log("None text");
+        // console.log("None text");`
         alert("덕담을 적어주세요.");
+      } else if (nickName.length === 0) {
+        alert("닉네임을 적어주세요.");
       } else {
         // console.log("Unexpected error");
         alert("Unexpected error");
@@ -152,7 +190,7 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
                       <a
                         onClick={() => pickStar(s.id)}
                         key={s.id}
-                        href="#"
+                        href=""
                         className="group"
                       >
                         <div className="w-40 bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
@@ -171,7 +209,7 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
           </div>
           <button
             className={
-              " m-2 text-gray-300 bg-zinc-500 hover:bg-gray-700 hover:text-white mt-2 px-3 py-2 rounded-md text-lg font-medium text-center"
+              " m-2 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white mt-2 px-3 py-2 rounded-md text-xl font-bold text-center"
             }
             onClick={() => {
               if (pickedStar) {
@@ -194,10 +232,10 @@ export const GiveStar = ({ userObj, isLoggedIn }) => {
               value={`${step * 50}`}
               percentage={true}
             />
-            <div className="flex items-center">
+            <div className="flex items-center m-2">
               <button
                 className={
-                  " w-24 flex m-2 first:text-gray-300 bg-zinc-500 hover:bg-gray-700 hover:text-white mt-2 px-3 py-2 rounded-md text-lg font-medium text-center"
+                  "flex justify-start items-center text-gray-300 bg-zinc-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium text-center"
                 }
                 onClick={() => {
                   setStep(1);

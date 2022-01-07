@@ -32,7 +32,7 @@ export const Auth = ({ userObj }) => {
       <Back url="/" />
       <button
         className={
-          " m-2 text-gray-300 bg-zinc-500 hover:bg-gray-700 hover:text-white mt-2 px-3 py-2 rounded-md text-lg font-medium text-center"
+          " m-2 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white mt-2 px-3 py-2 rounded-md text-xl font-bold text-center"
         }
         name="google"
         onClick={onSocialClick}

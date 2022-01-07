@@ -5,7 +5,7 @@ export const Back = ({ url }) => {
   return (
     <div className="block w-24 m-2">
       <Link to={{ pathname: url }}>
-        <div className="small_button">
+        <div className="small_button text-xl text-white">
           <svg
             className="w-6 h-6"
             fill="currentColor"
