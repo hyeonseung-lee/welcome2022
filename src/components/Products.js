@@ -30,7 +30,7 @@ export const Products = ({ id }) => {
   };
   useEffect(() => {
     getMyStars();
-  }, []);
+  }, [id]);
 
   // const target = new Date("February 1, 2022 00:00:00");
   // const target_date = target.getTime()

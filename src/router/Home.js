@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 export const Home = ({ userObj, isLoggedIn }) => {
   let { id } = useParams();
 
-  // console.log(id);
+  console.log(id);
   return (
     <div className={"base flex flex-col justify-start"}>
       <Navigation userObj={userObj} isLoggedIn={isLoggedIn} />
