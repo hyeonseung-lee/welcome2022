@@ -16,7 +16,7 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
   let { id } = useParams();
 
   return (
-    <Router>
+    <Router base="/">
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route
