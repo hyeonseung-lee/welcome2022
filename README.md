@@ -6,4 +6,5 @@
 
 - tailwindcss
 - firebase
-- kakao Auth
+- React JS
+- google Auth
