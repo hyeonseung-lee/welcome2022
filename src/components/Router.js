@@ -16,7 +16,7 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
   let { id } = useParams();
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route
