@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Back } from "components/Back";
 import { authService, firebaseAuth } from "../fbase";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { signInWithPopup } from "firebase/auth";
 
 export const Auth = ({ userObj }) => {
-  const navigate = useNavigate();
   const onSocialClick = async (event) => {
     try {
       const provider = new firebaseAuth.GoogleAuthProvider();
