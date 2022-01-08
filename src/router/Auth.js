@@ -3,6 +3,7 @@ import { Back } from "components/Back";
 import { authService, dbService, firebaseAuth } from "../fbase";
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { Ads } from "components/Ads";
 
 export const Auth = ({ userObj }) => {
   // const onSocialClick = async (event) => {
@@ -94,66 +95,67 @@ export const Auth = ({ userObj }) => {
   const toggleAccount = () => setNewAccount((prev) => !prev);
 
   return (
-    <div className="base flex flex-col">
-      <Back url="/" />
-      <div className="mt-40">
-        <form
-          onSubmit={onSubmit}
-          className="flex m-3 rounded-lg border-2 border-gray-200"
-        >
-          <div className="w-4/5">
-            <input
-              name="email"
-              type="text"
-              placeholder="이메일"
-              required
-              value={email}
-              onChange={onChange}
-              className="block w-full h-10 text-center border-t-2 border-b-2 border-x-2  rounded-tl-lg border-zinc-500"
-            />
-            {newAccount && (
+    <div className="base flex flex-col justify-between">
+      <div>
+        <Back url="/" />
+        <div className="mt-48">
+          <form
+            onSubmit={onSubmit}
+            className="flex m-3 rounded-lg border-2 border-gray-200"
+          >
+            <div className="w-4/5">
               <input
-                name="name"
+                name="email"
                 type="text"
-                placeholder="이름"
+                placeholder="이메일"
                 required
-                value={name}
+                value={email}
                 onChange={onChange}
-                className="block w-full h-10 text-center border-b-2 border-x-2 border-zinc-500"
+                className="block w-full h-10 text-center border-t-2 border-b-2 border-x-2  rounded-tl-lg border-zinc-500"
               />
-            )}
+              {newAccount && (
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="이름"
+                  required
+                  value={name}
+                  onChange={onChange}
+                  className="block w-full h-10 text-center border-b-2 border-x-2 border-zinc-500"
+                />
+              )}
 
+              <input
+                name="password"
+                type="password"
+                placeholder="비밀번호"
+                required
+                value={password}
+                onChange={onChange}
+                className="block w-full h-10 text-center border-b-2 border-x-2 rounded-bl-lg border-zinc-500"
+              />
+            </div>
             <input
-              name="password"
-              type="password"
-              placeholder="비밀번호"
-              required
-              value={password}
-              onChange={onChange}
-              className="block w-full h-10 text-center border-b-2 border-x-2 rounded-bl-lg border-zinc-500"
+              type="submit"
+              value={newAccount ? "가입하기" : "로그인"}
+              className="block w-1/5 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-r-lg text-xl font-bold text-center"
+            />
+          </form>
+
+          <div className="mx-3 text-left ">
+            <span className="text-white">
+              {newAccount ? "이미 계정이 있으신가요?" : "처음 오셨나요?"}
+            </span>
+            <input
+              type="submit"
+              className="ml-3 underline text-white bg-transparent"
+              onClick={toggleAccount}
+              value={newAccount ? "로그인 하기" : "가입하기"}
             />
           </div>
-          <input
-            type="submit"
-            value={newAccount ? "가입하기" : "로그인"}
-            className="block w-1/5 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-r-lg text-xl font-bold text-center"
-          />
-        </form>
-
-        <div className="mx-3 text-left ">
-          <span className="text-white">
-            {newAccount ? "이미 계정이 있으신가요?" : "처음 오셨나요?"}
-          </span>
-          <input
-            type="submit"
-            className="ml-3 underline text-white bg-transparent"
-            onClick={toggleAccount}
-            value={newAccount ? "로그인 하기" : "가입하기"}
-          />
         </div>
-      </div>
-      {/* can't use social login on web pack */}
-      {/* <button
+        {/* can't use social login on web pack */}
+        {/* <button
         className={
           " m-2 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white mt-2 px-3 py-2 rounded-md text-xl font-bold text-center"
         }
@@ -164,6 +166,8 @@ export const Auth = ({ userObj }) => {
       >
         Google로 로그인
       </button> */}
+      </div>
+      <Ads />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { dbService } from "fbase";
 import { addDoc, collection } from "firebase/firestore";
 import Progress from "@material-tailwind/react/Progress";
+import { Ads } from "components/Ads";
 
 const stars = [
   {
@@ -139,7 +140,7 @@ export const GiveStar = () => {
     } catch (e) {
       // catch error (no case yet.)
       // console.log("Error adding document: ", e);
-      alert("Error adding document: ", e);
+      alert("빈 칸 없이 적어주세요!!", e);
     }
   };
   // initializing
@@ -204,6 +205,7 @@ export const GiveStar = () => {
                 </div>
               </div>
             </div>
+            <Ads />
           </div>
           <button
             className={
@@ -282,7 +284,7 @@ export const GiveStar = () => {
             ></input>
           </div>
           {/* bottom */}
-
+          <Ads />
           <Buttons
             url={`/home/${id}`}
             text="별 보내기"

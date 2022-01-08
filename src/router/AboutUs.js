@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigation } from "components/Navigation";
+import { Ads } from "components/Ads";
 
 const stars = [
   {
@@ -116,39 +117,45 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
             </div>
           ))}
         </div>
-        <div>
-          <a className="font-bold text-2xl m-2">About us</a>
-          <div className="flex m-2">
-            <svg
-              class="w-6 h-6"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            <a>winney__@naver.com</a>
+        <div className="flex flex-col justify-between">
+          <div>
+            <a className="font-bold text-2xl m-2">About us</a>
+            <div className="flex m-2">
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <a>winney__@naver.com</a>
+            </div>
+          </div>
+          <div className="text-right m-4">
+            <div>
+              background.png from{" "}
+              <a
+                href="https://kor.pngtree.com"
+                className="text-lg text-yellow-300"
+              >
+                588ku
+              </a>
+            </div>
+            <div className="text-lg">
+              <a>In </a>
+              <a href="https://kor.pngtree.com" className="text-yellow-300">
+                Pngtree.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div className="text-right m-4">
-        <div>
-          background.png from{" "}
-          <a href="https://kor.pngtree.com" className="text-lg text-yellow-300">
-            588ku
-          </a>
-        </div>
-        <div className="text-lg">
-          <a>In </a>
-          <a href="https://kor.pngtree.com" className="text-yellow-300">
-            Pngtree.com
-          </a>
-        </div>
-      </div>
+      <Ads />
     </div>
   );
 };
