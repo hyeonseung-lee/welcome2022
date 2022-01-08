@@ -81,7 +81,7 @@ const stars = [
   },
 ];
 
-export const GiveStar = ({ userObj, isLoggedIn }) => {
+export const GiveStar = () => {
   const [step, setStep] = useState(1);
   const [pickedStar, setPickedStar] = useState(0);
   const [text, setText] = useState("");

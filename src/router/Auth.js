@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { Back } from "components/Back";
 import { authService, dbService, firebaseAuth } from "../fbase";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
 export const Auth = ({ userObj }) => {
-  const onSocialClick = async (event) => {
-    try {
-      const provider = new firebaseAuth.GoogleAuthProvider();
+  // const onSocialClick = async (event) => {
+  //   try {
+  //     const provider = new firebaseAuth.GoogleAuthProvider();
 
-      const result = await signInWithPopup(authService, provider);
+  //     const result = await signInWithPopup(authService, provider);
 
-      const user = result.user;
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      console.log(userObj);
-    } catch (e) {
-      // catch error (no case yet.)
-      // console.log("Error start with google: ", e);
-      alert("Error start with google: ", e);
-    }
-  };
+  //     const user = result.user;
+  //     const credential = GoogleAuthProvider.credentialFromResult(result);
+  //     const token = credential.accessToken;
+  //     console.log(userObj);
+  //   } catch (e) {
+  //     // catch error (no case yet.)
+  //     // console.log("Error start with google: ", e);
+  //     alert("Error start with google: ", e);
+  //   }
+  // };
 
   // useEffect(() => {
   //   navigate(`/home/${userObj.uid}`);
