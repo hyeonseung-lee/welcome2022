@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.c22dc222.css",
-    "main.js": "/static/js/main.a884a045.js",
-    "static/media/background.png": "/static/media/background.80e70fd4aeec6297238a.png",
-    "static/media/star (9).png": "/static/media/star (9).15a01e74b39db93ada39.png",
-    "static/media/star_logo.gif": "/static/media/star_logo.dc02827ef80d439c47b3.gif",
-    "static/media/star (4).png": "/static/media/star (4).0b844cdb145939bc7695.png",
-    "static/media/star (1).png": "/static/media/star (1).6f09a733e42c479fe607.png",
-    "static/media/star (8).png": "/static/media/star (8).12ca25c76363fec3f207.png",
-    "static/media/star (7).png": "/static/media/star (7).c8a80ae50093ed5599b8.png",
-    "static/media/star (5).png": "/static/media/star (5).17a6ecbe3f5b3b7877b0.png",
-    "static/media/star (3).png": "/static/media/star (3).f0fcd86cf3978edc3ec7.png",
-    "static/media/star (6).png": "/static/media/star (6).a45d0a056c4bbef6d829.png",
-    "static/media/star (2).png": "/static/media/star (2).618d11e122cbca3f8e9e.png",
-    "index.html": "/index.html",
-    "main.c22dc222.css.map": "/static/css/main.c22dc222.css.map",
-    "main.a884a045.js.map": "/static/js/main.a884a045.js.map"
+    "main.css": "/welcome2022/static/css/main.43f367e4.css",
+    "main.js": "/welcome2022/static/js/main.da93d508.js",
+    "static/media/background.png": "/welcome2022/static/media/background.80e70fd4aeec6297238a.png",
+    "static/media/star (9).png": "/welcome2022/static/media/star (9).15a01e74b39db93ada39.png",
+    "static/media/star_logo.gif": "/welcome2022/static/media/star_logo.dc02827ef80d439c47b3.gif",
+    "static/media/star (4).png": "/welcome2022/static/media/star (4).0b844cdb145939bc7695.png",
+    "static/media/star (1).png": "/welcome2022/static/media/star (1).6f09a733e42c479fe607.png",
+    "static/media/star (8).png": "/welcome2022/static/media/star (8).12ca25c76363fec3f207.png",
+    "static/media/star (7).png": "/welcome2022/static/media/star (7).c8a80ae50093ed5599b8.png",
+    "static/media/star (5).png": "/welcome2022/static/media/star (5).17a6ecbe3f5b3b7877b0.png",
+    "static/media/star (3).png": "/welcome2022/static/media/star (3).f0fcd86cf3978edc3ec7.png",
+    "static/media/star (6).png": "/welcome2022/static/media/star (6).a45d0a056c4bbef6d829.png",
+    "static/media/star (2).png": "/welcome2022/static/media/star (2).618d11e122cbca3f8e9e.png",
+    "index.html": "/welcome2022/index.html",
+    "main.43f367e4.css.map": "/welcome2022/static/css/main.43f367e4.css.map",
+    "main.da93d508.js.map": "/welcome2022/static/js/main.da93d508.js.map"
   },
   "entrypoints": [
-    "static/css/main.c22dc222.css",
-    "static/js/main.a884a045.js"
+    "static/css/main.43f367e4.css",
+    "static/js/main.da93d508.js"
   ]
 }
