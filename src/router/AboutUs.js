@@ -118,8 +118,9 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
           ))}
         </div>
         <div className="flex flex-col justify-between">
-          <div>
-            <a className="font-bold text-2xl m-2">About us</a>
+          <a className="font-bold text-2xl m-2">About us</a>
+          <div className="flex flex-col">
+            <a>필요한 모든 순간</a>
             <div className="flex m-2">
               <svg
                 class="w-6 h-6"
@@ -135,6 +136,7 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
               </svg>
               <a>winney__@naver.com</a>
             </div>
+            <a>연락바랍니다.</a>
           </div>
           <div className="text-right m-4">
             <div>

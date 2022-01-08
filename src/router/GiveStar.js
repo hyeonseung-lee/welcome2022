@@ -169,8 +169,8 @@ export const GiveStar = () => {
           {/* body */}
           <div className="flex flex-col justify-between ">
             <div className="w-full mt-4 flex flex-col justify-between">
-              <div className="mx-auto pb-2 px-3 h-5/6">
-                <div className="grid gap-y-5 gap-x-5 grid-cols-3">
+              <div className="mx-auto pb-2 h-5/6">
+                <div className="grid gap-y-4 grid-cols-3">
                   {stars.map((s) =>
                     s.id === pickedStar ? (
                       <a
