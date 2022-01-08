@@ -260,7 +260,7 @@ export const GiveStar = () => {
           {/* body */}
           <div className="h-full flex flex-col">
             {/* text input */}
-            <div className="flex flex-col h-2/5 mt-3">
+            <div className="flex flex-col h-72 mt-3">
               <label className="text-2xl text-gray-200 ml-10" for="text">
                 별에 담을 말을 적어주세요.
               </label>
