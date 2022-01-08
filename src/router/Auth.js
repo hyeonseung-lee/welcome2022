@@ -8,8 +8,9 @@ export const Auth = ({ userObj }) => {
     try {
       const provider = new firebaseAuth.GoogleAuthProvider();
 
-      await signInWithPopup(authService, provider);
+      const result = await signInWithPopup(authService, provider);
 
+      const user = result.user;
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       console.log(userObj);
