@@ -170,19 +170,19 @@ export const GiveStar = () => {
           <div className="flex flex-col justify-between ">
             <div className="w-full mt-4 flex flex-col justify-between">
               <div className="mx-auto pb-2 px-3 h-5/6">
-                <div className="grid gap-y-5 gap-x-5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-3">
+                <div className="grid gap-y-5 gap-x-5 grid-cols-3">
                   {stars.map((s) =>
                     s.id === pickedStar ? (
                       <a
                         onClick={() => pickStar(s.id)}
                         key={s.id}
-                        className="group"
+                        className="group flex justify-center items-center"
                       >
-                        <div className="w-40  border-4 border-yellow-500  bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                        <div className="w-5/6  border-4 border-yellow-500  bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
                           <img
                             src={require("assets/" + s.path)}
                             alt={"stars"}
-                            className="w-full h-full object-center object-cover group-hover:opacity-70"
+                            className=" object-center object-cover group-hover:opacity-70"
                           />
                         </div>
                       </a>
@@ -190,9 +190,9 @@ export const GiveStar = () => {
                       <a
                         onClick={() => pickStar(s.id)}
                         key={s.id}
-                        className="group"
+                        className="group flex justify-center items-center"
                       >
-                        <div className="w-40 bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+                        <div className="w-5/6 bg-slate-200 p-3 aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
                           <img
                             src={require("assets/" + s.path)}
                             alt={"stars"}
