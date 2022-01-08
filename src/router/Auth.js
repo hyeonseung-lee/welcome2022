@@ -10,10 +10,10 @@ export const Auth = ({ userObj }) => {
 
       await signInWithPopup(authService, provider);
 
-      // const user = result.user;
-      // const credential = GoogleAuthProvider.credentialFromResult(result);
-      // const token = credential.accessToken;
-      // console.log(userObj);
+      const user = result.user;
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      console.log(userObj);
     } catch (e) {
       // catch error (no case yet.)
       // console.log("Error start with google: ", e);
