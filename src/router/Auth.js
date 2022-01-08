@@ -87,6 +87,12 @@ export const Auth = ({ userObj }) => {
         alert(
           "이미 가입한 메일이에요!\n하단의 로그인 하기를 눌러 로그인을 진행해주세요!"
         );
+      } else if (er === "user-not-found") {
+        alert(
+          "없는 계정입니다!\n이메일 확인 또는 하단의 가입하기를 눌러 가입해주세요!"
+        );
+      } else if (er === "wrong-password") {
+        alert("비밀번호가 틀렸습니다.\n비밀번호를 확인해주세요!");
       }
     }
   };
