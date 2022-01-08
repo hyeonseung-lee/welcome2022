@@ -1,15 +1,32 @@
 import { dbService } from "fbase";
-import { collection, query, getDocs, orderBy, where } from "firebase/firestore";
+import {
+  collection,
+  query,
+  getDocs,
+  orderBy,
+  where,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { DetailStar } from "./DetailStar";
 import Icon from "@material-tailwind/react/Icon";
 import PaginationItem from "@material-tailwind/react/PaginationItem";
+import { Sharing } from "./Sharing";
 
 export const Products = ({ id }) => {
   const [stars, setStars] = useState([]);
   const [open, setOpen] = useState(false);
   const [clickedStar, setClickedStar] = useState(null);
   const [step, setStep] = useState(1);
+  const [myName, setMyName] = useState("");
+  const getMyName = async () => {
+    const nameRef = doc(dbService, "user", id);
+    const nameSnap = await getDoc(nameRef);
+    console.log(nameSnap.data());
+    const { name } = nameSnap.data();
+    setMyName(name);
+  };
 
   const getMyStars = async () => {
     const q = query(
@@ -30,6 +47,7 @@ export const Products = ({ id }) => {
   };
   useEffect(() => {
     getMyStars();
+    getMyName();
   }, [id]);
 
   // const target = new Date("February 1, 2022 00:00:00");
@@ -98,16 +116,24 @@ export const Products = ({ id }) => {
             <Icon name="keyboard_arrow_right" />
           </PaginationItem>
         )}
-        <div className="absolute right-0 bottom-0 flex items-center justify-center mr-px text-5xl border-2 pr-3 rounded-lg">
-          <svg
-            className=" text-yellow-400 w-20 h-20 mr-2"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          </svg>
-          <a className="text-white font-bold">{stars.length}</a>
+        <div className=" absolute left-0 bottom-0 ">
+          <div className="flex items-center border-b-2 mb-2">
+            <div className="mx-2 text-white text-3xl font-bold ">
+              {myName}님의
+            </div>
+            <div className=" flex items-center justify-center mr-px text-5xl pr-2">
+              <svg
+                className=" text-yellow-400 w-14 h-14 mr-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <a className="text-white font-bold">{stars.length}</a>
+            </div>
+          </div>
+          <Sharing />
         </div>
       </div>
       {open && (
