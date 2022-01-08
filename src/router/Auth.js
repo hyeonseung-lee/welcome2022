@@ -1,7 +1,7 @@
 import React from "react";
 import { Back } from "components/Back";
 import { authService, firebaseAuth } from "../fbase";
-import { signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 export const Auth = ({ userObj }) => {
   const onSocialClick = async (event) => {
@@ -10,7 +10,6 @@ export const Auth = ({ userObj }) => {
 
       await signInWithPopup(authService, provider);
 
-      const user = result.user;
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       console.log(userObj);
