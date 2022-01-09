@@ -14,7 +14,7 @@ import Icon from "@material-tailwind/react/Icon";
 import PaginationItem from "@material-tailwind/react/PaginationItem";
 import { Sharing } from "./Sharing";
 
-export const Products = ({ id }) => {
+export const Products = ({ id, userObj }) => {
   const [stars, setStars] = useState([]);
   const [open, setOpen] = useState(false);
   const [clickedStar, setClickedStar] = useState(null);
@@ -56,8 +56,12 @@ export const Products = ({ id }) => {
   const onClick = (star) => {
     let now = Date.now();
     if (now >= target) {
-      setClickedStar(star);
-      setOpen(!open);
+      if (userObj && userObj.uid === id) {
+        setClickedStar(star);
+        setOpen(!open);
+      } else {
+        alert("본인이 아니면 확인할 수 없습니다.");
+      }
     } else {
       alert("설날이 아니에요!!\n모든 덕담카드는 설날부터 볼 수 있어요!");
       // console.log(now);

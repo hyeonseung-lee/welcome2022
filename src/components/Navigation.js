@@ -85,7 +85,7 @@ export const Navigation = ({ userObj, isLoggedIn }) => {
                           </Link>
                         )}
                       </Menu.Item>
-                      {isLoggedIn && (
+                      {isLoggedIn ? (
                         <Menu.Item>
                           {({ active }) => (
                             <Link to="/">
@@ -99,6 +99,21 @@ export const Navigation = ({ userObj, isLoggedIn }) => {
                                 )}
                               >
                                 로그아웃
+                              </button>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      ) : (
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link to="/auth">
+                              <button
+                                className={classNames(
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
+                                )}
+                              >
+                                로그인
                               </button>
                             </Link>
                           )}

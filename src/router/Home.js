@@ -10,7 +10,7 @@ export const Home = ({ userObj, isLoggedIn }) => {
     <div className={"base flex flex-col justify-start"}>
       <Navigation userObj={userObj} isLoggedIn={isLoggedIn} />
       <div className="h-full flex flex-col justify-between">
-        <Products id={id} />
+        <Products id={id} userObj={userObj} />
         <Buttons
           url={`/${id}/give_star`}
           text="별 달아주기"
