@@ -3,7 +3,7 @@ import { Back } from "components/Back";
 import { authService, dbService, firebaseAuth } from "../fbase";
 // import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
-import { Ads } from "components/Ads";
+import { AdForAuth } from "components/Ads";
 
 export const Auth = ({ userObj }) => {
   // const onSocialClick = async (event) => {
@@ -173,7 +173,7 @@ export const Auth = ({ userObj }) => {
         Google로 로그인
       </button> */}
       </div>
-      <Ads />
+      <AdForAuth />
     </div>
   );
 };

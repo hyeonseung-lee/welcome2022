@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigation } from "components/Navigation";
-import { Ads } from "components/Ads";
+import { AdForAboutUs } from "components/Ads";
 
 const stars = [
   {
@@ -138,6 +138,7 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
             </div>
             <a>연락바랍니다.</a>
           </div>
+          <AdForAboutUs />
           <div className="text-right m-4">
             <div>
               background.png from{" "}
@@ -157,7 +158,6 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
           </div>
         </div>
       </div>
-      <Ads />
     </div>
   );
 };

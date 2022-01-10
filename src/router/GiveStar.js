@@ -5,7 +5,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { dbService } from "fbase";
 import { addDoc, collection } from "firebase/firestore";
 import Progress from "@material-tailwind/react/Progress";
-import { Ads } from "components/Ads";
 
 const stars = [
   {
@@ -205,7 +204,6 @@ export const GiveStar = () => {
                 </div>
               </div>
             </div>
-            <Ads />
           </div>
           <button
             className={
@@ -260,7 +258,7 @@ export const GiveStar = () => {
           {/* body */}
           <div className="h-full flex flex-col">
             {/* text input */}
-            <div className="flex flex-col h-72 mt-3">
+            <div className="flex flex-col h-1/2 mt-3">
               <label className="text-2xl text-gray-200 ml-10" for="text">
                 별에 담을 말을 적어주세요.
               </label>
@@ -284,7 +282,6 @@ export const GiveStar = () => {
             ></input>
           </div>
           {/* bottom */}
-          <Ads />
           <Buttons
             url={`/home/${id}`}
             text="별 보내기"
