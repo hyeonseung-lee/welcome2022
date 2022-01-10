@@ -81,8 +81,8 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
   return (
     <div className="base flex flex-col justify-start text-white">
       <Navigation userObj={userObj} isLoggedIn={isLoggedIn} />
-      <div className="h-full flex">
-        <div className="h-full">
+      <div className="h-full flex flex-col">
+        <div className="h-1/2 overflow-auto ">
           <a className="font-bold text-2xl m-2">Source</a>
           {stars.map((s) => (
             <div className="flex items-center ml-2 mb-2">
@@ -90,12 +90,12 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
                 <img
                   src={require(`assets/${s.path}`)}
                   alt={"stars"}
-                  className="w-12 h-12 object-center object-cover"
+                  className="w-3/12 h-3/12 object-center object-cover"
                 />
-                <a>{s.path}</a>
               </div>
-              <div className=" text-left ">
+              <div className=" w-11/12 text-left ">
                 <div>
+                  <a>{s.path}</a>
                   <a>Icons made by </a>
                   <a
                     href={s.writer_url}
@@ -116,29 +116,6 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex flex-col justify-between">
-          <a className="font-bold text-2xl m-2">About us</a>
-          <div className="flex flex-col">
-            <a>필요한 모든 순간</a>
-            <div className="flex m-2">
-              <svg
-                class="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <a>winney__@naver.com</a>
-            </div>
-            <a>연락바랍니다.</a>
-          </div>
-          <AdForAboutUs />
           <div className="text-right m-4">
             <div>
               background.png from{" "}
@@ -155,6 +132,31 @@ export const AboutUs = ({ userObj, isLoggedIn }) => {
                 Pngtree.com
               </a>
             </div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-between">
+          <a className="font-bold text-2xl m-2">About us</a>
+          <div className="flex justify-between">
+            <div className="flex flex-col overflow-scroll">
+              <a>필요한 모든 순간</a>
+              <div className="flex m-2">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <a>winney__@naver.com</a>
+              </div>
+              <a>연락바랍니다.</a>
+            </div>
+            <AdForAboutUs />
           </div>
         </div>
       </div>

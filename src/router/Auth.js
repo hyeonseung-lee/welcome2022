@@ -144,7 +144,7 @@ export const Auth = ({ userObj }) => {
             <input
               type="submit"
               value={newAccount ? "가입하기" : "로그인"}
-              className="block w-1/5 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-r-lg text-xl font-bold text-center"
+              className="block w-1/5 text-white bg-zinc-500 hover:bg-gray-700 hover:text-white rounded-r-lg text-xl font-bold text-center"
             />
           </form>
 
